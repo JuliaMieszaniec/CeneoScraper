@@ -25,13 +25,13 @@ selectors = {
     "purchase_date": ["span.user-post__published > time:nth-child(2)","datetime"],
     "vote_up": ["button.vote-yes","data-total-vote"],
     "vote_down": ["button.vote-no","data-total-vote"],
-     "content": ["div.user-post__text"],
-    "cons": [ "div.review-feature__title--negatives ~ div.review-feature__item", None, True],
-    "pros": [ "div.review-feature__title--negatives ~ div.review-feature__item", None, True],
+    "content": ["div.user-post__text"],
+    "cons": ["div.review-feature__title--negatives ~ div.review-feature__item", None, True],
+    "pros": ["div.review-feature__title--positives ~ div.review-feature__item", None, True],
  }
 
-# product_code = input("Podaj kod produktu: ")
-product_code= "96693065"
+product_code = input("Podaj kod produktu: ")
+#product_code= "96693065"
 url=f"https://www.ceneo.pl/{product_code}#tab=reviews"
 all_opinions=[]
 while(url):
